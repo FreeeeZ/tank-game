@@ -14,8 +14,8 @@
 tank-game/
 ├── public/             # Static files
 ├── src/                # Source code
-│   ├── components/     # React components
-│   ├── game/           # Game logic (tanks, bullets, explosions, obstacles, etc.)
+│   ├── classes/        # Classes with game logic (tanks, bullets, explosions, obstacles, etc.)
+│   ├── features/       # Components and hooks
 │   ├── App.tsx         # Main application component
 │   └── main.tsx        # Entry point
 ├── index.html          # HTML template
