@@ -1,7 +1,19 @@
 {
-  "files": [],
+  "types": ["node"],
   "references": [
     { "path": "./tsconfig.app.json"},
     { "path": "./tsconfig.node.json"}
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@features/*": ["./src/features/*"],
+      "@classes/*": ["./src/classes/*"],
+    }
+  },
+  "include": [
+    "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./src/**/*"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
