@@ -1,43 +1,50 @@
+# Tank game
+![Game Screenshot](./.repo/screen_1.png)
 
+## Main deps
 
-## Expanding the ESLint configuration
+![react](https://img.shields.io/badge/react-v19.0.0-green?style=flat-square)
+![typescript](https://img.shields.io/badge/typescript-v5.7.2-lightgrey?style=flat-square)
+![vite](https://img.shields.io/badge/vite-v6.1.0-yellow?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project structure
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+tank-game/
+├── public/             # Static files
+├── src/                # Source code
+│   ├── components/     # React components
+│   ├── game/           # Game logic (tanks, bullets, explosions, obstacles, etc.)
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Entry point
+├── index.html          # HTML template
+└── vite.config.ts      # Vite configuration
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Features
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Control the tank using the arrow keys.
+- Ability to shoot at the enemy.
+- A bot with artificial intelligence that moves and shoots.
+- Obstacles on the map that are randomly generated.
+- Animation of an explosion when a tank is destroyed.
+- Visually highlighted edges of the map.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Controls
+
+- Arrows up/down — move forward/backward.
+- Arrows left/right — turn the tank.
+- Space — shoot.
+
+## Quick start
+
+1. Install all dependencies using `yarn` or `npm install`
+2. Start the development server using `yarn dev` or `npm run dev`
+3. Open up [http://localhost:3000](http://localhost:3000)
+
+## License
+
+[MIT](https://github.com/FreeeeZ/tank-game/blob/main/LICENSE)
+
+Copyright (c) 2025, Shell Vladislav
